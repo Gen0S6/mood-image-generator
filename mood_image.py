@@ -12,9 +12,9 @@ import io
 from langdetect import detect  # Restored for language detection
 
 # Replace with your keys
-UNSPLASH_ACCESS_KEY = 'ws6OVordNuNogW3Iwo34IRlrMHU0jabQnjooaqKGFM0'
-OPENAI_API_KEY = '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'
-PEXELS_API_KEY = 'qJ8RyQKAEKudOH0iLFeKu2DjfAjYpgWXHXLoELb0JGOtKKQIHyN3hCj8'  # Optional, get from https://www.pexels.com/api/
+UNSPLASH_ACCESS_KEY = os.environ.get("UNSPLASH_ACCESS_KEY")
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
+PEXELS_API_KEY = os.environ.get("PEXELS_API_KEY")  # Optional
 
 # Initialize OpenAI client
 client = OpenAI(api_key=OPENAI_API_KEY)
